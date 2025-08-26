@@ -3,7 +3,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 import os
 
-MYSQL_URL = os.getenv("MYSQL_URL", "mysql+pymysql://root:password@localhost:3306/cyberguard")
+MYSQL_URL = os.getenv("MYSQL_URL", "mysql://root:OgdeXuuOLQPDnMsMqxXlcNVUvFKSgPaL@cybernova.railway.internal:3306/railway")
 
 engine = create_engine(MYSQL_URL, echo=False, pool_pre_ping=True, future=True)
 SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False, expire_on_commit=False)
@@ -20,3 +20,4 @@ def init_db():
     # Import models so Base.metadata knows about them
     import shared.models  # noqa
     Base.metadata.create_all(bind=engine)
+
