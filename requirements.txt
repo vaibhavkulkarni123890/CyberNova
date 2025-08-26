@@ -1,20 +1,30 @@
-fastapi==0.104.1
-uvicorn[standard]==0.24.0
-python-multipart==0.0.6
+# ----------- Core FastAPI and ASGI -----------
+fastapi==0.105.0
+uvicorn[standard]>=0.29.0
+python-multipart>=0.0.6
+
+# ----------- Authentication & Security -----------
 pyjwt==2.8.0
-bcrypt==4.0.1
-pydantic[email]==2.5.0
-httpx==0.25.2
-pytz==2023.3
-psutil==5.9.6
-requests==2.31.0
-numpy==1.26.4
-scikit-learn==1.4.2
-setuptools==69.5.1
-pymysql==1.1.0
-
-sqlalchemy==2.0.25
-pymysql==1.1.0
+bcrypt>=4.0.1
 passlib==1.7.4
-python-dotenv==1.0.0
 
+# ----------- HTTP & Async -----------
+httpx>=0.25.2
+requests>=2.31.0
+
+# ----------- Data & Utilities -----------
+pydantic>=2.5.0
+pytz>=2023.3
+psutil>=5.9.6
+python-dotenv>=1.0.0
+
+# ----------- Database & ORM -----------
+sqlalchemy>=2.0.25
+pymysql>=1.1.0
+
+# ----------- Machine Learning -----------
+numpy>=2.2.6
+scikit-learn>=1.4.2
+
+# ----------- Build Tools -----------
+setuptools>=69.5.1
